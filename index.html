@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🧾Agenda de contatos📞</h1>
+    <form id="form-contato">
+        <input type="text"
+        id="nome"
+        placeholder="Nome"
+        required
+        />
+        <input type="tel"
+        id="telefone"
+        placeholder="Telefone"
+        required
+        oninput="formatarTelefone(this)"
+        inputmode="numeric"
+        maxlength="15"
+        onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+        />
+        <button type="submit">Cadastrar</button>
+    </form>
+    <table id="tabela-contatos">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telfone</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
